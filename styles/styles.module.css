@@ -1,0 +1,12 @@
+.first_nav {
+  background-color: #fff;
+  width: 100%;
+  position: static;
+  /* height: 30px; */
+}
+
+.first_nav_logo {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}

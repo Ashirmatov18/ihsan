@@ -1,0 +1,156 @@
+.calc_title_name {
+  font-weight: 700 bold;
+  font-size: 48px;
+  margin-left: 130px;
+  /* line-height: 4px; */
+  height: 58px;
+  margin-bottom: 0;
+}
+
+.calc_title_line {
+  width: 510px;
+  margin-left: 0;
+  height: 9px;
+  /* border: none; */
+  background-color: #00512e;
+}
+
+.but_filter {
+  width: 280px;
+  height: 50px;
+  top: 10px;
+  background-color: #00512e;
+  color: white;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 600 bold;
+  margin-top: 52px;
+}
+
+.but_filter_second {
+  width: 280px;
+  height: 50px;
+  top: 10px;
+  background-color: #00512e;
+  color: white;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 600 bold;
+  margin-top: 52px;
+  margin-left: 20px;
+}
+
+.currency {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.point {
+  display: flex;
+  /* justify-content: end; */
+  margin-top: 30px;
+}
+
+.img_point {
+  /* width: 140px; */
+}
+
+.calc_info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.point_name {
+  font-size: 18px;
+  font-weight: 400 bold;
+}
+
+.point_price {
+  font-size: 18px;
+  font-weight: 600 bold;
+  color: #ffd600;
+}
+
+.but_group {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.last_but {
+  background-color: #ffd600;
+  width: 217px;
+  height: 50px;
+  border-radius: 10px !important;
+  color: #000;
+  font-size: 18px;
+}
+
+.first_but {
+  border-radius: 10px;
+  width: 101px;
+  font-size: 18px;
+  color: #989898;
+  background-color: #fff;
+}
+
+.second_but {
+  border-radius: 10px !important;
+  font-size: 18px;
+  background-color: #fff;
+  color: #989898;
+  width: 101px;
+}
+
+.third_but {
+  border-radius: 10px !important;
+  font-size: 18px;
+  background-color: #fff;
+  color: #989898;
+  width: 101px;
+}
+
+.button_group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rub_b {
+  border-radius: 10px !important;
+  margin-right: 5px;
+  background-color: #fff;
+  color: #989898;
+}
+
+.usd_b {
+  border-radius: 10px !important;
+  margin-right: 5px;
+  background-color: #00512e;
+  color: #fff;
+}
+
+.som_b {
+  border-radius: 10px !important;
+  background-color: #fff;
+  color: #989898;
+}
+
+.compute {
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #ffd600;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.account {
+  margin-top: 150px;
+}
+
+.last_one {
+  height: 120px;
+}
