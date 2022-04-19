@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import Opportunity from "../components/Opportunity";
 import Calculator from "../components/Calculator";
 import Residential from "../components/Residential";
+import Review from "../components/Review";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Opportunity />
         <Calculator />
         <Residential />
+        <Review />
       </main>
     </>
   );
