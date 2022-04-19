@@ -65,7 +65,7 @@ export default function Residential() {
               <figcaption className={styles.card__caption}>
                 <h2 className={styles.card__title}>IMRAN</h2>
                 <p className={styles.card__snippet}>
-                  Drinking more caffeine during the coronavirus lockdown? Here's
+                  Drinking more caffeine during the coronavirus lockdown? Heres
                   how it can affect you over time and advice on making it better
                   for you.
                 </p>
@@ -87,7 +87,7 @@ export default function Residential() {
                 <h2 className={styles.card__title}>ЯСИН</h2>
                 <p className={styles.card__snippet}>
                   On Friday, offices around the country celebrated the 15th
-                  annual Take Your Dog to Work Day. Though the event's primary
+                  annual Take Your Dog to Work Day. Though the events primary
                   goal is to raise awareness for pet adoption, the unanticipated
                   impact may be a slightly more relaxing work environment for
                   any office choosing to participate.
@@ -109,7 +109,7 @@ export default function Residential() {
               <figcaption className={styles.card__caption}>
                 <h2 className={styles.card__title}>ЯСИН </h2>
                 <p className={styles.card__snippet}>
-                  Drinking more caffeine during the coronavirus lockdown? Here's
+                  Drinking more caffeine during the coronavirus lockdown? Heres
                   how it can affect you over time and advice on making it better
                   for you.
                 </p>
@@ -130,7 +130,7 @@ export default function Residential() {
               <figcaption className={styles.card__caption}>
                 <h2 className={styles.card__title}>IMRAN</h2>
                 <p className={styles.card__snippet}>
-                  Drinking more caffeine during the coronavirus lockdown? Here's
+                  Drinking more caffeine during the coronavirus lockdown? Heres
                   how it can affect you over time and advice on making it better
                   for you.
                 </p>
