@@ -8,6 +8,9 @@ import Opportunity from "../components/Opportunity";
 import Calculator from "../components/Calculator";
 import Residential from "../components/Residential";
 import Review from "../components/Review";
+import News from "../components/News";
+import Questions from "../components/Questions";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
         <Calculator />
         <Residential />
         <Review />
+        <News />
+        <Questions />
+        <Footer />
       </main>
     </>
   );
