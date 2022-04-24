@@ -13,5 +13,50 @@
   height: 9px;
   /* border: none; */
   background-color: #00512e;
+  margin-bottom: 50px;
+}
+
+.que {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
   margin-bottom: 300px;
+  margin-top: 150px;
+}
+
+.first_modal {
+  margin-left: 70px;
+  width: 650px;
+  text-align: center;
+  height: 50px;
+  margin-bottom: 30px;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 19px;
+  margin-top: 20px;
+}
+
+.info_modal {
+  margin-left: 880px;
+  width: 580px;
+  height: 250px;
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  text-align: center;
+  border-radius: 10px;
+}
+
+.main_modal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first_modal:hover {
+  width: 700px;
+  color: #00512e;
+  font-size: 24px;
+  font-weight: 600 bold;
+  height: 70px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

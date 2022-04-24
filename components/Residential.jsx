@@ -46,7 +46,7 @@ export default function Residential() {
                 <p className={styles.card__snippet}>
                   NASA released a list of 219 new “planet candidates” discovered
                   by the Kepler space telescope, 10 of which are similar to
-                  Earth’s size and may be habitable by other life forms.
+                  Earths size and may be habitable by other life forms.
                 </p>
                 <a href="" className={styles.card__button}>
                   Read more
