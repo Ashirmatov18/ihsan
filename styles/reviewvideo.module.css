@@ -46,3 +46,22 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.main_modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: hidden;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+
+.modal_content {
+}

@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import styles from "../../styles/reviewvideo.module.css";
 import Image from "next/image";
 import fis from "../../img/fir.png";
+import { useRef } from "react";
+import { Video, CloudinaryContext } from "cloudinary-react";
 
 export default function ReviewsVid() {
+  const videoRef = useRef();
+
   const [firstModal, setFirstModal] = useState(false);
   const [secondModal, setSecondModal] = useState(false);
   const [thirdModal, setThirdModal] = useState(false);
@@ -12,6 +16,21 @@ export default function ReviewsVid() {
   const [sixModal, setSixModal] = useState(false);
   const [seventhModal, setSeventhModal] = useState(false);
   const [eightModal, setEightModal] = useState(false);
+
+  // if (
+  //   firstModal ||
+  //   secondModal ||
+  //   thirdModal ||
+  //   fourthModal ||
+  //   fifthModal ||
+  //   sixModal ||
+  //   seventhModal ||
+  //   eightModal
+  // ) {
+  //   document.body.classList.add("active_modal");
+  // } else {
+  //   document.body.classList.remove("active_modal");
+  // }
 
   return (
     <div>
@@ -137,20 +156,31 @@ export default function ReviewsVid() {
           </div>
           <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
+        <CloudinaryContext cloud_name="codedog">
+          <div>
+            <Video
+              publicId="videoplayer-demo"
+              width="100%"
+              controls
+              innerRef={videoRef}
+            />
+          </div>
+        </CloudinaryContext>
       </div>
 
-      {firstModal ? (
-        <div className="mt-10 flex justify-center items-center flex-col w-72 rounded-lg shadow-xl h-auto p-2">
-          <Image src={fis} width={100} height={100} objectFit="contain" />
-          <h2 className="text-base mt-2 mx-4 text-gray-400 font-semibold text-center">
-            May your life be filled with success and achievements.
-            Congratulations!
-          </h2>
-          <button className={styles.buttt} onClick={() => setFirstModal(false)}>
-            Close
-          </button>
+      {firstModal && (
+        <div className={styles.main_modal}>
+          <div className={styles.overlay}></div>
+          <div className={styles.modal_content}>
+            <button
+              className={styles.buttt}
+              onClick={() => setFirstModal(false)}
+            >
+              Close
+            </button>
+          </div>
         </div>
-      ) : null}
+      )}
     </div>
   );
 }
