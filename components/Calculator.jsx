@@ -18,10 +18,40 @@ import line from "../img/Line.png";
 
 export default function Calculator() {
   const [age, setAge] = React.useState("");
+  const [currency, setCurrency] = React.useState("usd");
+  const [paymentPercent, setPaymentPercent] = React.useState(50);
+  const [costValue, setCostValue] = React.useState(1000);
+  const [calculationResult, setCalculationResult] = React.useState({
+    cost: costValue,
+    firstPayment: (paymentPercent * costValue) / 100,
+  });
+
+  const handleClickCur = (newCurrency) => () => {
+    setCurrency(newCurrency);
+  };
+
+  const handleClickPayment = (newpayment) => () => {
+    setPaymentPercent(newpayment);
+  };
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+
+  const handleCalculation = () => {
+    setCalculationResult((prevCalculation) => {
+      return {
+        cost: costValue,
+        firstPayment: ((paymentPercent * costValue) / 100).toFixed(0),
+      };
+    });
+  };
+
+  const currencyClass = (value) =>
+    `${styles.currency_button} ${currency == value ? styles.active : ""}`;
+
+  const contributionClass = (value) =>
+    `${styles.payment_button} ${paymentPercent == value ? styles.active : ""}`;
 
   return (
     <div className={styles.main_calc}>
@@ -40,22 +70,46 @@ export default function Calculator() {
             </button>
           </div>
           <div style={{ marginTop: "50px" }}>
-            <h2 style={{ color: "#00512E" }}>Стоимость - 15900$ </h2>
+            <h2 style={{ color: "#00512E" }}>Стоимость - {costValue}$ </h2>
             <Box width={700}>
               <Slider
-                defaultValue={50}
+                // defaultValue={50}
+                min={1000}
+                max={10000}
+                value={costValue}
+                onChange={(e) => setCostValue(e.target.value)}
                 aria-label="Default"
                 valueLabelDisplay="auto"
               />
             </Box>
             <div className={styles.but_group}>
-              <ButtonGroup disableElevation variant="contained">
-                <Button className={styles.rub_b}>Руб</Button>
-                <Button className={styles.usd_b}>USD</Button>
-                <Button className={styles.som_b}>Сом</Button>
+              <ButtonGroup
+                className={styles.main_buttons}
+                disableElevation
+                variant="contained"
+              >
+                <Button
+                  className={currencyClass("rub")}
+                  onClick={handleClickCur("rub")}
+                >
+                  Руб
+                </Button>
+                <Button
+                  className={currencyClass("usd")}
+                  onClick={handleClickCur("usd")}
+                >
+                  USD
+                </Button>
+                <Button
+                  className={currencyClass("som")}
+                  onClick={handleClickCur("som")}
+                >
+                  Сом
+                </Button>
               </ButtonGroup>
             </div>
           </div>
+
           <div>
             <h2 style={{ color: "#00512E" }}>Первоначальный взнос</h2>
             <ButtonGroup
@@ -63,9 +117,28 @@ export default function Calculator() {
               disableElevation
               variant="contained"
             >
-              <Button className={styles.second_but}>25%</Button>
-              <Button className={styles.second_but}>35%</Button>
-              <Button className={styles.third_but}>50%</Button>
+              <Button
+                className={contributionClass(25)}
+                onClick={handleClickPayment(25)}
+                // className={styles.second_but}
+              >
+                25%
+              </Button>
+              <Button
+                className={contributionClass(35)}
+                onClick={handleClickPayment(35)}
+
+                //  className={styles.second_but}
+              >
+                35%
+              </Button>
+              <Button
+                className={contributionClass(50)}
+                onClick={handleClickPayment(50)}
+                // className={styles.third_but}
+              >
+                50%
+              </Button>
               <Button className={styles.last_but}>2500$</Button>
             </ButtonGroup>
           </div>
@@ -99,7 +172,9 @@ export default function Calculator() {
                 </Select>
               </FormControl>
             </Box>
-            <button className={styles.compute}>Рассчитать</button>
+            <button className={styles.compute} onClick={handleCalculation}>
+              Рассчитать
+            </button>
           </div>
         </div>
 
@@ -150,7 +225,7 @@ export default function Calculator() {
 
             <div className={styles.account}>
               <h2 style={{ fontSize: "18px", color: "#FFD600" }}>
-                РЕУЛЬТАТЫ РАССЧЕТА
+                РЕЗУЛЬТАТЫ РАССЧЕТА
               </h2>
               <div>
                 <div className={styles.point}>
@@ -158,7 +233,9 @@ export default function Calculator() {
                     Стоимость Недвижимости:
                     <Image className={styles.img_point} src={line} />
                   </span>
-                  <span className={styles.point_price}>23335$</span>
+                  <span className={styles.point_price}>
+                    {calculationResult.cost}$
+                  </span>
                 </div>
                 <div className={styles.point}>
                   <span className={styles.point_name}>
@@ -167,7 +244,9 @@ export default function Calculator() {
                     <Image className={styles.img_point} src={line} />
                     {/* </span> */}
                   </span>
-                  <span className={styles.point_price}>6458$</span>
+                  <span className={styles.point_price}>
+                    {calculationResult.firstPayment}$
+                  </span>
                 </div>
                 <div className={styles.point}>
                   <span className={styles.point_name}>

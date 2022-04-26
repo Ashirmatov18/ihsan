@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../../styles/reviewvideo.module.css";
 import Image from "next/image";
 import fis from "../../img/fir.png";
-import { useRef } from "react";
-import { Video, CloudinaryContext } from "cloudinary-react";
+import ReactPlayer from "react-player";
+import { Box } from "@mui/material";
+import Play from "../../img/play.png";
+
+let useClickOutside = (handler) => {
+  let domNode = useRef();
+
+  useEffect(() => {
+    let maybeHandler = (event) => {
+      if (!domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+
+    document.addEventListener("mousedown", maybeHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", maybeHandler);
+    };
+  });
+
+  return domNode;
+};
 
 export default function ReviewsVid() {
-  const videoRef = useRef();
-
   const [firstModal, setFirstModal] = useState(false);
   const [secondModal, setSecondModal] = useState(false);
   const [thirdModal, setThirdModal] = useState(false);
@@ -17,20 +36,16 @@ export default function ReviewsVid() {
   const [seventhModal, setSeventhModal] = useState(false);
   const [eightModal, setEightModal] = useState(false);
 
-  // if (
-  //   firstModal ||
-  //   secondModal ||
-  //   thirdModal ||
-  //   fourthModal ||
-  //   fifthModal ||
-  //   sixModal ||
-  //   seventhModal ||
-  //   eightModal
-  // ) {
-  //   document.body.classList.add("active_modal");
-  // } else {
-  //   document.body.classList.remove("active_modal");
-  // }
+  let domNode = useClickOutside(() => {
+    setFirstModal(false);
+    setSecondModal(false);
+    setThirdModal(false);
+    setFourthModal(false);
+    setFifthModal(false);
+    setSixModal(false);
+    setSeventhModal(false);
+    setEightModal(false);
+  });
 
   return (
     <div>
@@ -40,144 +55,226 @@ export default function ReviewsVid() {
       </div>
 
       <div className={styles.main_block}>
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setFirstModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setSecondModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
       </div>
 
       <div className={styles.main_block}>
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setThirdModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
 
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setFourthModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
       </div>
 
       <div className={styles.main_block}>
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setFifthModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
 
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setSixModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
       </div>
 
-      <div className={styles.main_block}>
-        <div>
+      <div className={styles.main_block} style={{ marginBottom: "100px" }}>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setSeventhModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
 
-        <div>
+        <div ref={domNode}>
           <h2>Отзыв от нашего клиента</h2>
           <div className={styles.first_modals}>
             <div className={styles.firstt}>
-              <button
-                onClick={() => {
-                  setFirstModal(true);
-                }}
-              ></button>
+              <div style={{ paddingTop: "110px" }}>
+                <Image
+                  src={Play}
+                  onClick={() => {
+                    setEightModal(true);
+                  }}
+                />
+              </div>
             </div>
           </div>
-          <video src="https://www.youtube.com/watch?v=hvYKrqnY8LM"></video>
         </div>
-        <CloudinaryContext cloud_name="codedog">
-          <div>
-            <Video
-              publicId="videoplayer-demo"
-              width="100%"
-              controls
-              innerRef={videoRef}
-            />
-          </div>
-        </CloudinaryContext>
       </div>
 
       {firstModal && (
         <div className={styles.main_modal}>
-          <div className={styles.overlay}></div>
-          <div className={styles.modal_content}>
-            <button
-              className={styles.buttt}
-              onClick={() => setFirstModal(false)}
-            >
-              Close
-            </button>
+          <div className={styles.overlay}>
+            {/* <div className={styles.modal_content}>
+              <button
+                className={styles.close_modal}
+                onClick={() => setFirstModal(false)}
+              >
+                C
+              </button> */}
+            <ReactPlayer
+              className={styles.player}
+              url="https://www.youtube.com/watch?v=9DwGahSqcEc"
+              controls={true}
+              light
+              playIcon={
+                <div>
+                  <Image src={Play} />
+                </div>
+              }
+            />
+            {/* </div> */}
+          </div>
+        </div>
+      )}
+
+      {secondModal && (
+        <div className={styles.main_modal}>
+          <div className={styles.overlay}>
+            {/* <div className={styles.modal_content}>
+              <button
+                className={styles.close_modal}
+                onClick={() => setFirstModal(false)}
+              >
+                C
+              </button> */}
+            <ReactPlayer
+              className={styles.player}
+              url="https://www.youtube.com/watch?v=wvFDXV0VBg4&list=PLUfiNKbU7q-f4m0nwJWkf7WrNezjMg3pn&index=98"
+              controls={true}
+              light
+              playIcon={
+                <div>
+                  <Image src={Play} />
+                </div>
+              }
+            />
+            {/* </div> */}
+          </div>
+        </div>
+      )}
+      {thirdModal && (
+        <div className={styles.main_modal}>
+          <div className={styles.overlay}>
+            <div className={styles.modal_content}>
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=h8V9qphAPBg"
+                controls={true}
+              />
+              <button
+                className={styles.close_modal}
+                onClick={() => setThirdModal(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {fourthModal && (
+        <div className={styles.main_modal}>
+          <div className={styles.overlay}>
+            <div className={styles.modal_content}>
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=9DwGahSqcEc"
+                controls={true}
+              />
+              <button
+                className={styles.close_modal}
+                onClick={() => setFourthModal(false)}
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}

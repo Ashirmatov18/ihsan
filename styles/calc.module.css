@@ -116,14 +116,14 @@
   justify-content: space-around;
 }
 
-.rub_b {
+/* .rub_b {
   border-radius: 10px !important;
-  margin-right: 5px;
-  background-color: #fff;
-  color: #989898;
-}
+  margin-right: 5px; */
+/* background-color: #fff;
+  color: #989898; */
+/* } */
 
-.usd_b {
+/* .usd_b {
   border-radius: 10px !important;
   margin-right: 5px;
   background-color: #00512e;
@@ -134,7 +134,7 @@
   border-radius: 10px !important;
   background-color: #fff;
   color: #989898;
-}
+} */
 
 .compute {
   border-radius: 10px;
@@ -153,4 +153,29 @@
 
 .last_one {
   height: 120px;
+}
+
+.main_buttons button {
+  background-color: #fff;
+}
+
+.currency_button {
+  border-radius: 10px !important;
+}
+
+.currency_button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.currency_button.active {
+  background-color: #00512e !important;
+}
+
+.payment_button {
+  background-color: #fff;
+  color: black;
+}
+.payment_button.active {
+  background-color: #00512e !important;
+  color: #fff;
 }
