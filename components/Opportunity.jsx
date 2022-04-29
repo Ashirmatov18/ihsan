@@ -24,14 +24,16 @@ export default function Opportunity() {
           Строительных <br /> бригад
         </span>
       </div>
-      <div className={styles.halal}>
-        <Image src={halal} />
-      </div>
-      <div className={styles.bottom_info}>
-        <h1 className={styles.main_char}>
-          Возможность купить жильё <br /> по самым выгодным ценам
-        </h1>
-        <button className={styles.butt}>Перейти</button>
+      <div className={styles.opportunity_text}>
+        <div className={styles.halal}>
+          <Image src={halal} />
+        </div>
+        <div className={styles.bottom_info}>
+          <h1 className={styles.main_char}>
+            Возможность купить жильё <br /> по самым выгодным ценам
+          </h1>
+          <button className={styles.butt}>Перейти</button>
+        </div>
       </div>
     </div>
   );

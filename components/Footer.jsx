@@ -3,6 +3,12 @@ import styles from "../styles/footer.module.css";
 import Image from "next/image";
 import tap from "../img/Vector (2).png";
 import ihs from "../img/ihs.png";
+import message from "../img/Message.png";
+import phone from "../img/Mobile.png";
+import location from "../img/Location.png";
+import insta from "../img/instagram.png";
+import you from "../img/you.png";
+import what from "../img/what.png";
 
 export default function Footer() {
   return (
@@ -20,6 +26,17 @@ export default function Footer() {
                 с целью совместного <br /> удовлетворения в <br /> недвижимом
                 имуществе.
               </span>
+            </div>
+            <div className={styles.icons_link}>
+              <div>
+                <Image src={insta} />
+              </div>
+              <div>
+                <Image src={what} />
+              </div>
+              <div>
+                <Image src={you} />
+              </div>
             </div>
           </div>
 
@@ -59,17 +76,19 @@ export default function Footer() {
           <div className={styles.column}>
             <div className={styles.title}>Reach us</div>
             <div className={styles.link} href="#">
-              ihsangroup@gmail.io
+              <Image src={message} />
+              <span style={{ marginLeft: "10px" }}>ihsangroup@gmail.io</span>
             </div>
             <div className={styles.link} href="#">
-              +996-(555)-555-555
+              <Image src={phone} />
+              <span style={{ marginLeft: "10px" }}>+996-(555)-555-555</span>
             </div>
             <div className={styles.link} href="#">
-              г. Бишкек, Раззакова / Боконбаева 113, <br /> БЦ “Альтаир”,
-              3-этаж.
-            </div>
-            <div className={styles.link} href="#">
-              Support
+              <Image src={location} />
+              <span style={{ marginLeft: "10px" }}>
+                г. Бишкек, Раззакова / Боконбаева 113, <br /> БЦ “Альтаир”,
+                3-этаж.
+              </span>
             </div>
           </div>
 
@@ -84,6 +103,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
+      <div></div>
+      <div className={styles.ihsangroup}>
+        <span>Ihsangroup © 2022 все права защищены</span>
       </div>
     </div>
   );

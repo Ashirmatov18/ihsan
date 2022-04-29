@@ -10,3 +10,43 @@
   justify-content: space-between;
   list-style-type: none;
 }
+
+.navbar_info {
+  display: flex;
+  justify-content: space-around;
+  width: 800px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_construction {
+  background-color: #ffd600;
+  color: #fff !important;
+  font-size: 16px;
+  width: 225px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 140px;
+}
+
+.about {
+  width: 50px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.lang {
+  margin-left: 40px;
+}
+
+.logo_social {
+  margin-left: 25px;
+}
+
+.social_network {
+  display: flex;
+  justify-content: space-evenly;
+}

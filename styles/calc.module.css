@@ -59,6 +59,7 @@
 .calc_info {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .point_name {
@@ -178,4 +179,50 @@
 .payment_button.active {
   background-color: #00512e !important;
   color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .calc_info {
+    justify-content: center;
+  }
+  .second_section {
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .account {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .second_section {
+    margin-top: 50px;
+    width: 80%;
+    float: left;
+  }
+  .account {
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .first_section {
+    width: 100%;
+  }
+  .but_filter_second {
+    margin-left: 0;
+  }
+  .main_calc {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .calc_title_name {
+    margin-left: 0;
+  }
+  .calc_title_line {
+    width: 70%;
+  }
 }

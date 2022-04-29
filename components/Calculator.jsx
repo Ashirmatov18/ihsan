@@ -59,6 +59,7 @@ export default function Calculator() {
         <h1 className={styles.calc_title_name}>КАЛЬКУЛЯТОР</h1>
         <hr className={styles.calc_title_line} />
       </div>
+
       <div className={styles.calc_info}>
         <div className={styles.first_section}>
           <div>
@@ -74,6 +75,10 @@ export default function Calculator() {
             <Box width={700}>
               <Slider
                 // defaultValue={50}
+                sx={{
+                  width: 300,
+                  color: "success.main",
+                }}
                 min={1000}
                 max={10000}
                 value={costValue}

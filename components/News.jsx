@@ -68,7 +68,7 @@ export default function News() {
           <hr className={styles.calc_title_line} />
         </div>
       </div>
-      <div className={styles.map}>
+      {/* <div className={styles.map}>
         <div className={styles.dot}>
           <span>
             <strong style={{ color: "#00512E" }}>
@@ -82,7 +82,7 @@ export default function News() {
             +996 700 00 51 51
           </span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

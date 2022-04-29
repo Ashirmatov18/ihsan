@@ -15,6 +15,10 @@ import insta from "../img/insta.png";
 import vector from "../img/Vector.png";
 import styles from "../styles/styles.module.css";
 import logo from "../img/main_logo.png";
+import { Button } from "@mui/material";
+import FormControl from "@mui/material/FormControl";
+import NativeSelect from "@mui/material/NativeSelect";
+import Link from "next/link";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,70 +64,137 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className={styles.burger_menu}>
+      <div className={styles.menu_btn}></div>
       <div className={styles.first_nav}>
         <ul className={styles.first_nav_logo}>
           <li>
             +996 700 00 51 51 <Image src={vector} />
           </li>
-          <li>
-            <Image src={insta} alt="insta" />
-            <Image src={twitter} alt="twitter" />
-            <Image src={youtube} alt="youtube" />
+          <div>
+            <li className={styles.social_network}>
+              <div className={styles.logo_social}>
+                <Image src={insta} alt="insta" />
+              </div>
+              <div className={styles.logo_social}>
+                <Image src={twitter} alt="twitter" />
+              </div>
+
+              <div className={styles.logo_social}>
+                <Image src={youtube} alt="youtube" />
+              </div>
+            </li>
+          </div>
+
+          <li style={{ marginRight: "70px" }}>
+            г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж.{" "}
+            <Image src={vector} />
           </li>
-          <li>г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж.</li>
         </ul>
       </div>
 
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar style={{ backgroundColor: "black" }} position="static">
-          <Toolbar>
-            <IconButton
+        <AppBar
+          elevation={0}
+          style={{ backgroundColor: "white", color: "black" }}
+          position="static"
+        >
+          <Toolbar className={styles.toolbar}>
+            {/* <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="open drawer"
               sx={{ mr: 2 }}
-            >
-              {/* <MenuIcon /> */}
-            </IconButton>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            >
-              <Image src={logo} alt="company_logo" />
-            </Typography>
-            <Typography variant="h6" color="inherit" component="div">
-              Photos
-            </Typography>
+            > */}
+            {/* <MenuIcon /> */}
+            {/* </IconButton> */}
+            <div>
+              <Typography variant="h6" color="inherit" component="div">
+                <Image src={logo} alt="company_logo" />
+              </Typography>
+            </div>
 
-            <Typography variant="h6" color="inherit" component="div">
-              Photos
-            </Typography>
+            <div className={styles.navbar_info}>
+              <Typography
+                className={styles.about}
+                variant="h6"
+                color="inherit"
+                component="div"
+              >
+                О нас
+              </Typography>
 
-            <Typography variant="h6" color="inherit" component="div">
-              Photos
-            </Typography>
-            <Typography variant="h6" color="inherit" component="div">
-              Photos
-            </Typography>
-            <Typography variant="h6" color="inherit" component="div">
-              Photos
-            </Typography>
-            <Typography variant="h6" color="inherit" component="div">
-              Photos
-            </Typography>
+              <Typography
+                className={styles.about}
+                variant="h6"
+                color="inherit"
+                component="div"
+              >
+                Программы
+              </Typography>
+
+              <Typography
+                className={styles.about}
+                variant="h6"
+                color="inherit"
+                component="div"
+              >
+                Новости
+              </Typography>
+              <Typography
+                className={styles.about}
+                variant="h6"
+                color="inherit"
+                component="div"
+              >
+                Отзывы
+              </Typography>
+
+              <Link href="/contacts">
+                <Typography
+                  className={styles.about}
+                  variant="h6"
+                  color="inherit"
+                  component="div"
+                >
+                  Контакты
+                </Typography>
+              </Link>
+            </div>
+            <div>
+              <Button
+                className={styles.button_construction}
+                variant="h6"
+                // color="inherit"
+                component="div"
+                style={{ pointerEvents: "none" }}
+              >
+                ihsan construction
+              </Button>
+            </div>
+
+            <div className={styles.lang}>
+              {" "}
+              <FormControl fullWidth>
+                <NativeSelect
+                  defaultValue={30}
+                  inputProps={{
+                    name: "age",
+                    id: "uncontrolled-native",
+                  }}
+                >
+                  <option value={10}>РУС</option>
+                  <option value={20}>КЫР</option>
+                </NativeSelect>
+              </FormControl>
+            </div>
 
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
+              <StyledInputBase inputProps={{ "aria-label": "search" }} />
             </Search>
           </Toolbar>
         </AppBar>

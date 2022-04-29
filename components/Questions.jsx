@@ -15,7 +15,13 @@ const First = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Какая гарантия что вы не закроетесь?
           </span>
@@ -52,7 +58,13 @@ const Second = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Кому оформляется недвижимость?
           </span>
@@ -89,7 +101,13 @@ const Third = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             В случае отказа приобретения жилья, могу ли я <br /> вернуть свои
             деньги назад?
@@ -127,7 +145,13 @@ const Fourth = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Можно ли все процессы оформления производить <br /> дистанционно,
             если мы находимся в другой <br /> стране?
@@ -165,7 +189,13 @@ const Fifth = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Что будет, если у меня нет денег для <br /> первоначального взноса?
           </span>
@@ -202,7 +232,13 @@ const Six = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Можно ли досрочно закрыть долг за выкупаемую <br /> в рассрочку
             имущество?
@@ -240,7 +276,13 @@ const Seventh = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Помимо первоначального взноса, какие взносы необходимо вносить,
             чтобы получить недвижимость или авто?
@@ -278,7 +320,13 @@ const Eight = () => {
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.first_modal}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "16px",
+          }}
+        >
           <span style={{ marginLeft: "15px" }}>
             Могу ли я приобрести недвижимость в любом <br /> регионе страны?
           </span>

@@ -28,8 +28,9 @@
   height: 550px;
   padding: 0;
   margin-right: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  border: none;
 }
 
 .title_name {
@@ -45,7 +46,7 @@
   font-weight: 400 bold;
 }
 
-.map {
+/* .map {
   width: 100%;
   height: 600px;
   background-image: url("../img/map.png");
@@ -82,4 +83,14 @@
   text-align: center;
   padding-top: 40px;
   margin-left: 200px;
+} */
+
+@media only screen and (max-width: 1200px) {
+  .news_main {
+    flex-wrap: wrap;
+  }
+
+  .news {
+    margin-top: 150px;
+  }
 }

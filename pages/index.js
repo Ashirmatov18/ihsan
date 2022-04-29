@@ -11,6 +11,7 @@ import Review from "../components/Review";
 import News from "../components/News";
 import Questions from "../components/Questions";
 import Footer from "../components/Footer";
+import MainMap from "../components/Map/MainMap";
 
 export default function Home() {
   return (
@@ -18,7 +19,6 @@ export default function Home() {
       <Head>
         <title>Ishan</title>
       </Head>
-
       <main>
         <Navbar />
         <Opportunity />
@@ -26,6 +26,7 @@ export default function Home() {
         <Residential />
         <Review />
         <News />
+        <MainMap />
         <Questions />
         <Footer />
       </main>

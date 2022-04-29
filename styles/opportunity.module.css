@@ -4,8 +4,10 @@
 
 .main_info {
   min-width: 100% !important;
-  height: 800px;
+  height: 900px;
   background-image: url(../img/main_info.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .strong_name {
@@ -43,4 +45,62 @@
   color: #fff;
   font-weight: 600;
   font-size: 18px;
+}
+
+.opportunity_text {
+  margin-left: 130px;
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main_info {
+    width: 100%;
+    height: 1200px;
+  }
+  .opportunity_text {
+    margin-left: 40px;
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main_info {
+    width: 100%;
+    height: 1200px;
+  }
+  .opportunity_text {
+    margin-left: 40px;
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .stat {
+    margin-right: 50px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .main_info {
+    height: 1500px;
+  }
+  .stat {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .opportunity_text {
+    margin-left: 10px;
+  }
+  .stat {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  .info_stats {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .main_char {
+    font-size: 55px;
+  }
 }

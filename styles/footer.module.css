@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 60px;
+  /* margin-left: 150px; */
 }
 
 .row {
@@ -34,7 +34,7 @@
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   grid-gap: 20px; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   @media (max-width: 1000px) {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
@@ -44,12 +44,14 @@
   margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
+  font-size: 14px;
 }
 .title {
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
   margin-bottom: 40px;
-  font-weight: bold;
+  font-weight: 500 medium;
+  width: 160px;
 }
 
 .link:hover {
@@ -74,4 +76,16 @@
   width: 106px;
   padding-left: 10px;
   /* opacity: 1.5; */
+}
+
+.ihsangroup {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #fff;
+}
+
+.icons_link {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }

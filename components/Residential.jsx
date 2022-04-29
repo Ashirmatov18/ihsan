@@ -14,13 +14,13 @@ export default function Residential() {
       <div className={styles.first_residen}>
         <div className={styles.main_res}>
           <div className={styles.take_res}>
-            <div style={{ paddingLeft: "70px", paddingTop: "30px" }}>
+            <div style={{ paddingLeft: "130px", paddingTop: "30px" }}>
               <Image src={halal} />
             </div>
-            <h1 style={{ paddingLeft: "70px" }}>
+            <h1 style={{ paddingLeft: "130px" }}>
               Приобретение жилья <br /> сегодня с рассрочкой <br /> на 10 лет 0%
             </h1>
-            <div style={{ paddingLeft: "70px", opacity: "1" }}>
+            <div style={{ paddingLeft: "130px" }}>
               <button className={styles.res_but}>Перейти</button>
             </div>
           </div>
@@ -42,11 +42,11 @@ export default function Residential() {
                 className={styles.card__image}
               />
               <figcaption className={styles.card__caption}>
-                <h2 className={styles.card__title}>IHSAN</h2>
+                <h1 className={styles.card__title}>IHSAN</h1>
+                <h4>ул. Ч.Айтматова бывш. Пр. Мира</h4>
                 <p className={styles.card__snippet}>
-                  NASA released a list of 219 new “planet candidates” discovered
-                  by the Kepler space telescope, 10 of which are similar to
-                  Earths size and may be habitable by other life forms.
+                  Molestie rhoncus dolor praesent ante turpis suspendisse
+                  viverra eu
                 </p>
                 <a href="" className={styles.card__button}>
                   Read more
