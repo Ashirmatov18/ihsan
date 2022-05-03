@@ -4,10 +4,8 @@ import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import youtube from "../img/youtube.png";
 import twitter from "../img/twitter.png";
@@ -15,10 +13,12 @@ import insta from "../img/insta.png";
 import vector from "../img/Vector.png";
 import styles from "../styles/styles.module.css";
 import logo from "../img/main_logo.png";
-import { Button } from "@mui/material";
+import { Button, useMediaQuery } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import Link from "next/link";
+import { useTheme } from "@mui/material";
+import DrawerComponent from "./DrawerComponent.jsx";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -63,9 +63,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const theme = useTheme();
+
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <nav className={styles.burger_menu}>
-      <div className={styles.menu_btn}></div>
       <div className={styles.first_nav}>
         <ul className={styles.first_nav_logo}>
           <li>
@@ -93,112 +96,120 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar
-          elevation={0}
-          style={{ backgroundColor: "white", color: "black" }}
-          position="static"
-        >
-          <Toolbar className={styles.toolbar}>
-            {/* <IconButton
+      {isMatch ? (
+        <DrawerComponent />
+      ) : (
+        <>
+          <div className={styles.second_nav}>
+            <Box sx={{ flexGrow: 1 }}>
+              <AppBar
+                elevation={0}
+                style={{ backgroundColor: "white", color: "black" }}
+                position="static"
+              >
+                <Toolbar className={styles.toolbar}>
+                  {/* <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="open drawer"
               sx={{ mr: 2 }}
             > */}
-            {/* <MenuIcon /> */}
-            {/* </IconButton> */}
-            <div>
-              <Typography variant="h6" color="inherit" component="div">
-                <Image src={logo} alt="company_logo" />
-              </Typography>
-            </div>
+                  {/* <MenuIcon /> */}
+                  {/* </IconButton> */}
+                  <div>
+                    <Typography variant="h6" color="inherit" component="div">
+                      <Image src={logo} alt="company_logo" />
+                    </Typography>
+                  </div>
 
-            <div className={styles.navbar_info}>
-              <Typography
-                className={styles.about}
-                variant="h6"
-                color="inherit"
-                component="div"
-              >
-                О нас
-              </Typography>
+                  <div className={styles.navbar_info}>
+                    <Typography
+                      className={styles.about}
+                      variant="h6"
+                      color="inherit"
+                      component="div"
+                    >
+                      О нас
+                    </Typography>
 
-              <Typography
-                className={styles.about}
-                variant="h6"
-                color="inherit"
-                component="div"
-              >
-                Программы
-              </Typography>
+                    <Typography
+                      className={styles.about}
+                      variant="h6"
+                      color="inherit"
+                      component="div"
+                    >
+                      Программы
+                    </Typography>
 
-              <Typography
-                className={styles.about}
-                variant="h6"
-                color="inherit"
-                component="div"
-              >
-                Новости
-              </Typography>
-              <Typography
-                className={styles.about}
-                variant="h6"
-                color="inherit"
-                component="div"
-              >
-                Отзывы
-              </Typography>
+                    <Typography
+                      className={styles.about}
+                      variant="h6"
+                      color="inherit"
+                      component="div"
+                    >
+                      Новости
+                    </Typography>
+                    <Typography
+                      className={styles.about}
+                      variant="h6"
+                      color="inherit"
+                      component="div"
+                    >
+                      Отзывы
+                    </Typography>
 
-              <Link href="/contacts">
-                <Typography
-                  className={styles.about}
-                  variant="h6"
-                  color="inherit"
-                  component="div"
-                >
-                  Контакты
-                </Typography>
-              </Link>
-            </div>
-            <div>
-              <Button
-                className={styles.button_construction}
-                variant="h6"
-                // color="inherit"
-                component="div"
-                style={{ pointerEvents: "none" }}
-              >
-                ihsan construction
-              </Button>
-            </div>
+                    <Link href="/contacts">
+                      <Typography
+                        className={styles.about}
+                        variant="h6"
+                        color="inherit"
+                        component="div"
+                      >
+                        Контакты
+                      </Typography>
+                    </Link>
+                  </div>
+                  <div>
+                    <Button
+                      className={styles.button_construction}
+                      variant="h6"
+                      // color="inherit"
+                      component="div"
+                      style={{ pointerEvents: "none" }}
+                    >
+                      ihsan construction
+                    </Button>
+                  </div>
 
-            <div className={styles.lang}>
-              {" "}
-              <FormControl fullWidth>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: "age",
-                    id: "uncontrolled-native",
-                  }}
-                >
-                  <option value={10}>РУС</option>
-                  <option value={20}>КЫР</option>
-                </NativeSelect>
-              </FormControl>
-            </div>
+                  <div className={styles.lang}>
+                    {" "}
+                    <FormControl fullWidth>
+                      <NativeSelect
+                        defaultValue={30}
+                        inputProps={{
+                          name: "age",
+                          id: "uncontrolled-native",
+                        }}
+                      >
+                        <option value={10}>РУС</option>
+                        <option value={20}>КЫР</option>
+                      </NativeSelect>
+                    </FormControl>
+                  </div>
 
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase inputProps={{ "aria-label": "search" }} />
-            </Search>
-          </Toolbar>
-        </AppBar>
-      </Box>
+                  <Search>
+                    <SearchIconWrapper>
+                      <SearchIcon />
+                    </SearchIconWrapper>
+                    <StyledInputBase inputProps={{ "aria-label": "search" }} />
+                  </Search>
+                </Toolbar>
+              </AppBar>
+            </Box>
+          </div>
+        </>
+      )}
     </nav>
   );
 }
