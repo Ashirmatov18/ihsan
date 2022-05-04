@@ -15,13 +15,6 @@
   background-color: #00512e;
 }
 
-/* .news_main {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 100px;
-  /* flex-wrap: wrap; */
-/* padding: 0px; */
-
 .news {
   width: 380px;
   height: 550px;
@@ -49,6 +42,7 @@
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .first_team {
@@ -72,4 +66,23 @@
   color: #ffd600;
   font-size: 24px;
   text-align: right;
+}
+
+@media only screen and (max-width: 992px) {
+  .first_team {
+    display: block;
+  }
+  .ihs_first {
+    text-align: center;
+  }
+  .second_team {
+    display: block;
+  }
+  .calc_title_name {
+    margin-left: 0;
+    padding-bottom: 150px;
+  }
+  .calc_title_line {
+    width: 100%;
+  }
 }

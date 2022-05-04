@@ -47,8 +47,8 @@ export default function Team() {
             <div className={styles.titleP_main}>
               <h4 className={styles.title_name}>Осоров Улан</h4>
               <span classname={styles.mini_desc}>
-                Первый Заместитель <br /> Председателя правления НЖК <br /> "
-                Ихсан Групп ЛТД"
+                Первый Заместитель <br /> Председателя правления НЖК <br />{" "}
+                "Ихсан Групп ЛТД"
               </span>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function Team() {
         </div>
 
         <div className={styles.second_team}>
-          <div>
+          <div style={{ textAlign: "center" }}>
             <h1 className={styles.ihs_first}>
               НЖК "Ихсан Групп ЛТД"— <br /> доступное жилье для <br /> каждого
             </h1>

@@ -130,3 +130,27 @@
 .img_char {
   width: 400px;
 }
+
+@media only screen and (max-width: 992px) {
+  .image_bot {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 90px;
+  }
+  .main_programms_rate {
+    width: 100%;
+  }
+  .tittle_first {
+    margin-top: 150px;
+  }
+  .calc_title_line_two {
+    width: 100%;
+  }
+  .img_char {
+    margin: 0 auto;
+  }
+  .rate_first {
+    height: auto;
+    padding-left: 0;
+  }
+}

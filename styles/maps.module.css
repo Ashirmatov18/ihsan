@@ -1,0 +1,104 @@
+.calc_title_name {
+  font-weight: 700 bold;
+  font-size: 48px;
+  margin-left: 130px;
+  /* line-height: 4px; */
+  height: 58px;
+  margin-bottom: 0;
+}
+
+.calc_title_line {
+  width: 510px;
+  margin-left: 0;
+  height: 9px;
+  /* border: none; */
+  background-color: #00512e !important;
+}
+
+.kg_map_info {
+  margin-top: 70px;
+  margin-left: 130px;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.kg_map_info span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.country {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.main_map {
+  width: 110vh !important;
+  margin-left: 150px;
+}
+
+.rus_map_info {
+  display: flex;
+  margin-top: -100px;
+  margin-bottom: 70px;
+}
+
+.rus_map_info span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.russian_map {
+  float: right;
+  margin-right: 170px;
+}
+
+.info_contacts {
+  width: 517px;
+  height: 850px;
+  border-radius: 10px;
+  border: black solid;
+  color: #008045;
+  position: absolute;
+  z-index: 99;
+  background-color: #ffff;
+  margin-left: 800px;
+  margin-top: -600px;
+}
+
+.info_kg {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.street_info {
+  width: 340px;
+  height: 65px;
+  background-color: #008045;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.phone_info {
+  width: 114px;
+  height: 65px;
+  background-color: #008045;
+  color: #fff;
+  text-align: center;
+}
+
+.map_style {
+  display: flex;
+  position: relative;
+}
+
+.close_btn {
+  margin-top: 30px;
+  width: 100px;
+  background-color: #008045;
+  display: flex;
+  justify-content: center;
+}

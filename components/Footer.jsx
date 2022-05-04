@@ -15,27 +15,29 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.wrapper}>
         <div className={styles.row}>
-          <div className={styles.column}>
-            <div className={styles.title}>
-              <Image src={ihs} />
-            </div>
-            <div className={styles.link} href="#">
-              <span>
-                Жилищный Кооператив <br /> Ихсан - это добровольное <br />{" "}
-                объединение людей, <br />
-                с целью совместного <br /> удовлетворения в <br /> недвижимом
-                имуществе.
-              </span>
-            </div>
-            <div className={styles.icons_link}>
-              <div>
-                <Image src={insta} />
+          <div className={styles.first_column}>
+            <div className={styles.column}>
+              <div className={styles.title}>
+                <Image src={ihs} />
               </div>
-              <div>
-                <Image src={what} />
+              <div className={styles.link} href="#">
+                <span>
+                  Жилищный Кооператив <br /> Ихсан - это добровольное <br />{" "}
+                  объединение людей, <br />
+                  с целью совместного <br /> удовлетворения в <br /> недвижимом
+                  имуществе.
+                </span>
               </div>
-              <div>
-                <Image src={you} />
+              <div className={styles.icons_link}>
+                <div>
+                  <Image src={insta} />
+                </div>
+                <div>
+                  <Image src={what} />
+                </div>
+                <div>
+                  <Image src={you} />
+                </div>
               </div>
             </div>
           </div>
@@ -93,13 +95,15 @@ export default function Footer() {
           </div>
 
           <div className={styles.column}>
-            <div className={styles.title}>Обратная связь</div>
-            <div className={styles.link} href="#">
-              <input
-                className={styles.inp_footer}
-                type="text"
-                placeholder="Комментарий..."
-              />
+            <div className={styles.feedback}>
+              <div className={styles.title}>Обратная связь</div>
+              <div className={styles.link} href="#">
+                <input
+                  className={styles.inp_footer}
+                  type="text"
+                  placeholder="Комментарий..."
+                />
+              </div>
             </div>
           </div>
         </div>
