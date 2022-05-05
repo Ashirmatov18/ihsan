@@ -46,3 +46,9 @@
   font-size: 14px;
   font-weight: 400 bold;
 }
+
+@media only screen and (max-width: 690px) {
+  .calc_title_line {
+    width: 100%;
+  }
+}

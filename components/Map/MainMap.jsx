@@ -240,12 +240,7 @@ function MainMap() {
             </div>
           </div>
         )}
-        <div
-          className={styles.russian_map}
-          onClick={() => {
-            setRusModal(true);
-          }}
-        >
+        <div className={styles.russian_map}>
           <div>
             <div ref={domNode} className={styles.rus_map_info}>
               <Image src={rus} />
@@ -253,7 +248,11 @@ function MainMap() {
                 <span>Россия</span>
               </div>
             </div>
-            <div>
+            <div
+              onClick={() => {
+                setRusModal(true);
+              }}
+            >
               <Image src={ru} />
             </div>
           </div>

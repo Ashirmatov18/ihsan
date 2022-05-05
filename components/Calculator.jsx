@@ -72,7 +72,12 @@ export default function Calculator() {
           </div>
           <div style={{ marginTop: "50px" }}>
             <h2 style={{ color: "#00512E" }}>Стоимость - {costValue}$ </h2>
-            <Box width={700}>
+            <Box
+              width={500}
+              sx={{
+                width: 300,
+              }}
+            >
               <Slider
                 // defaultValue={50}
                 sx={{

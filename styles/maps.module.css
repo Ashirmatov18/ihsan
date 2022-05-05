@@ -120,6 +120,13 @@
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .info_contacts {
+    margin-left: 400px;
+    margin-top: -400px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .main_map {
     width: 50vh !important;
@@ -131,19 +138,28 @@
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .info_contacts {
+    margin-left: 200px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .main_map {
     width: 50vh !important;
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 690px) {
   .main_map {
     width: 30vh !important;
   }
   .calc_title_line {
     width: 100%;
     margin-top: 90px;
+  }
+  .info_contacts {
+    margin-left: auto;
   }
 }
 

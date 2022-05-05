@@ -62,12 +62,6 @@ export default function News() {
         </div>
       </div>
 
-      <div>
-        <div style={{ marginTop: "50px" }} className={styles.calc_title}>
-          <h1 className={styles.calc_title_name}>НАШИ ФИЛИАЛЫ</h1>
-          <hr className={styles.calc_title_line} />
-        </div>
-      </div>
       {/* <div className={styles.map}>
         <div className={styles.dot}>
           <span>

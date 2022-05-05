@@ -27,7 +27,6 @@
   width: 510px;
   margin-left: 0;
   height: 9px;
-  /* border: none; */
   background-color: #00512e;
 }
 
@@ -72,5 +71,11 @@
   }
   .calc_title_name {
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .calc_title_line {
+    width: 100%;
   }
 }
