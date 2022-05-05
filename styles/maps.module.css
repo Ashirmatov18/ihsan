@@ -49,8 +49,10 @@
 }
 
 .russian_map {
-  float: right;
-  margin-right: 170px;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
 }
 
 .info_contacts {
@@ -80,6 +82,8 @@
   color: #fff;
   text-align: center;
   padding-top: 15px;
+  align-items: center;
+  text-align: center;
 }
 
 .phone_info {
@@ -87,7 +91,14 @@
   height: 65px;
   background-color: #008045;
   color: #fff;
-  text-align: center;
+  text-align: center !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.phone_info div {
+  margin-top: 5px;
 }
 
 .map_style {
@@ -101,4 +112,43 @@
   background-color: #008045;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1600px) {
+  .main_map {
+    width: 80vh !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main_map {
+    width: 50vh !important;
+    margin-left: auto;
+  }
+  .rus_map_info {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main_map {
+    width: 50vh !important;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .main_map {
+    width: 30vh !important;
+  }
+  .calc_title_line {
+    width: 100%;
+    margin-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .kg_map {
+    width: 400px;
+  }
 }
