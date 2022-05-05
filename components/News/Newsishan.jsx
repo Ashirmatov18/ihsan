@@ -4,6 +4,7 @@ import Image from "next/image";
 import moscow from "../../img/moscow.png";
 import talas from "../../img/talas.png";
 import ui from "../../img/ui.png";
+import Link from "next/link";
 
 export default function Newsishan() {
   return (
@@ -16,37 +17,41 @@ export default function Newsishan() {
       </div>
 
       <div className={styles.news_main}>
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={moscow} />
+        <Link href="/newsdetailmoscow">
+          <div className={styles.news}>
+            <div>
+              <Image className={styles.img_m} src={moscow} />
+            </div>
+            <div className={styles.titleP_main}>
+              <h4 className={styles.title_name}>
+                Мы открылись <br /> в городе Москва
+              </h4>
+              <span classname={styles.mini_desc}>
+                Теперь вы можете прийти к нам в офис <br /> и получить от наших
+                менеджеров <br /> достоверную информацию и задать <br />{" "}
+                интересующие вопросы
+              </span>
+            </div>
           </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>
-              Мы открылись <br /> в городе Москва
-            </h4>
-            <span classname={styles.mini_desc}>
-              Теперь вы можете прийти к нам в офис <br /> и получить от наших
-              менеджеров <br /> достоверную информацию и задать <br />{" "}
-              интересующие вопросы
-            </span>
-          </div>
-        </div>
+        </Link>
 
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={talas} />
+        <Link href="/newsdetailtalas">
+          <div className={styles.news}>
+            <div>
+              <Image className={styles.img_m} src={talas} />
+            </div>
+            <div className={styles.titleP_main}>
+              <h4 className={styles.title_name}>
+                Мы открылись <br /> в городе Таласе
+              </h4>
+              <span classname={styles.mini_desc}>
+                Теперь вы можете прийти к нам в офис <br /> и получить от наших
+                менеджеров <br /> достоверную информацию и задать <br />{" "}
+                интересующие вопросы
+              </span>
+            </div>
           </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>
-              Мы открылись <br /> в городе Таласе
-            </h4>
-            <span classname={styles.mini_desc}>
-              Теперь вы можете прийти к нам в офис <br /> и получить от наших
-              менеджеров <br /> достоверную информацию и задать <br />{" "}
-              интересующие вопросы
-            </span>
-          </div>
-        </div>
+        </Link>
 
         <div className={styles.news}>
           <div>

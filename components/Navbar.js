@@ -124,40 +124,47 @@ export default function Navbar() {
                   </div>
 
                   <div className={styles.navbar_info}>
-                    <Typography
-                      className={styles.about}
-                      variant="h6"
-                      color="inherit"
-                      component="div"
-                    >
-                      О нас
-                    </Typography>
+                    <Link href="/team">
+                      <Typography
+                        className={styles.about}
+                        variant="h6"
+                        color="inherit"
+                        component="div"
+                      >
+                        О нас
+                      </Typography>
+                    </Link>
 
-                    <Typography
-                      className={styles.about}
-                      variant="h6"
-                      color="inherit"
-                      component="div"
-                    >
-                      Программы
-                    </Typography>
-
-                    <Typography
-                      className={styles.about}
-                      variant="h6"
-                      color="inherit"
-                      component="div"
-                    >
-                      Новости
-                    </Typography>
-                    <Typography
-                      className={styles.about}
-                      variant="h6"
-                      color="inherit"
-                      component="div"
-                    >
-                      Отзывы
-                    </Typography>
+                    <Link href="/programs">
+                      <Typography
+                        className={styles.about}
+                        variant="h6"
+                        color="inherit"
+                        component="div"
+                      >
+                        Программы
+                      </Typography>
+                    </Link>
+                    <Link href="/news">
+                      <Typography
+                        className={styles.about}
+                        variant="h6"
+                        color="inherit"
+                        component="div"
+                      >
+                        Новости
+                      </Typography>
+                    </Link>
+                    <Link href="/review">
+                      <Typography
+                        className={styles.about}
+                        variant="h6"
+                        color="inherit"
+                        component="div"
+                      >
+                        Отзывы
+                      </Typography>
+                    </Link>
 
                     <Link href="/contacts">
                       <Typography
