@@ -118,9 +118,11 @@ export default function Navbar() {
                   {/* <MenuIcon /> */}
                   {/* </IconButton> */}
                   <div>
-                    <Typography variant="h6" color="inherit" component="div">
-                      <Image src={logo} alt="company_logo" />
-                    </Typography>
+                    <Link href="/">
+                      <Typography variant="h6" color="inherit" component="div">
+                        <Image src={logo} alt="company_logo" />
+                      </Typography>
+                    </Link>
                   </div>
 
                   <div className={styles.navbar_info}>
