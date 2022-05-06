@@ -8,6 +8,7 @@ export default function map() {
     <main>
       <Navbar />
       <MainMap />
+      <Footer />
     </main>
   );
 }
