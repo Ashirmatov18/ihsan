@@ -274,7 +274,7 @@ function MainMap() {
         </div>
       )}
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
