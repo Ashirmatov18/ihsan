@@ -133,7 +133,7 @@ export default function Navbar() {
                         color="inherit"
                         component="div"
                       >
-                        О нас
+                        <span className={styles.popup_window}>lorem</span>О нас
                       </Typography>
                     </Link>
 
@@ -144,6 +144,7 @@ export default function Navbar() {
                         color="inherit"
                         component="div"
                       >
+                        <span className={styles.popup_window}>lorem</span>
                         Программы
                       </Typography>
                     </Link>
@@ -154,6 +155,7 @@ export default function Navbar() {
                         color="inherit"
                         component="div"
                       >
+                        <span className={styles.popup_window}>lorem</span>
                         Новости
                       </Typography>
                     </Link>
@@ -164,6 +166,7 @@ export default function Navbar() {
                         color="inherit"
                         component="div"
                       >
+                        <span className={styles.popup_window}>lorem</span>
                         Отзывы
                       </Typography>
                     </Link>
@@ -175,6 +178,7 @@ export default function Navbar() {
                         color="inherit"
                         component="div"
                       >
+                        <span className={styles.popup_window}>lorem</span>
                         Контакты
                       </Typography>
                     </Link>

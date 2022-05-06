@@ -162,6 +162,11 @@
 
 .currency_button {
   border-radius: 10px !important;
+  color: #00512e;
+}
+.currency_button:hover {
+  background-color: #00512e !important;
+  color: #fff;
 }
 
 .currency_button:not(:last-child) {
@@ -170,14 +175,26 @@
 
 .currency_button.active {
   background-color: #00512e !important;
+  color: #fff;
 }
 
 .payment_button {
   background-color: #fff;
   color: black;
 }
+
+.payment_button:hover {
+  background-color: #00512e !important;
+  color: #fff;
+}
+
 .payment_button.active {
   background-color: #00512e !important;
+  color: #fff;
+}
+
+.last_but:hover {
+  background-color: #000;
   color: #fff;
 }
 
