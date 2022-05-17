@@ -169,7 +169,7 @@ html *:after {
   transition: 0.3s;
   background-color: #ffd600;
   width: 350px;
-  height: 50px;
+  height: 70px;
   font-size: 18px;
 }
 .card__button:hover {
@@ -226,6 +226,9 @@ html *:after {
   .take_res {
     width: 100%;
   }
+  .residention_title {
+    padding-left: 10px;
+  }
 }
 @media only screen and (max-width: 650px) {
   .calc_title_line {
@@ -236,5 +239,10 @@ html *:after {
   }
   .take_res {
     width: auto;
+  }
+
+  .calc_title_name {
+    margin-left: 0;
+    margin-top: 10px;
   }
 }

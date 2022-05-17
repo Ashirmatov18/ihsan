@@ -17,7 +17,10 @@ export default function Residential() {
             <div style={{ paddingLeft: "130px", paddingTop: "30px" }}>
               <Image src={halal} />
             </div>
-            <h1 style={{ paddingLeft: "130px" }}>
+            <h1
+              className={styles.residention_title}
+              style={{ paddingLeft: "130px" }}
+            >
               Приобретение жилья <br /> сегодня с рассрочкой <br /> на 10 лет 0%
             </h1>
             <div style={{ paddingLeft: "130px" }}>

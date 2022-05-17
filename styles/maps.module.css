@@ -171,4 +171,8 @@
   .kg_map {
     width: 400px;
   }
+  .calc_title_name {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }

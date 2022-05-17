@@ -42,55 +42,57 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className={styles.column}>
-            <div className={styles.title}>О Кооперативе</div>
-            <div className={styles.link} href="#">
-              О нас
+          <div className={styles.main_link}>
+            <div className={styles.column}>
+              <div className={styles.title}>О Кооперативе</div>
+              <div className={styles.link} href="#">
+                О нас
+              </div>
+              <div className={styles.link} href="#">
+                Почему мы
+              </div>
+              <div className={styles.link} href="#">
+                Отзывы
+              </div>
+              <div className={styles.link} href="#">
+                Новости
+              </div>
+              <div className={styles.link} href="#">
+                Сертификаты
+              </div>
             </div>
-            <div className={styles.link} href="#">
-              Почему мы
+            <div className={styles.column}>
+              <div className={styles.title}>Наши услуги</div>
+              <div className={styles.link} href="#">
+                Программы
+              </div>
+              <div className={styles.link} href="#">
+                Гарантии
+              </div>
+              <div className={styles.link} href="#">
+                Преимущества
+              </div>
+              <div className={styles.link} href="#">
+                Условия
+              </div>
             </div>
-            <div className={styles.link} href="#">
-              Отзывы
-            </div>
-            <div className={styles.link} href="#">
-              Новости
-            </div>
-            <div className={styles.link} href="#">
-              Сертификаты
-            </div>
-          </div>
-          <div className={styles.column}>
-            <div className={styles.title}>Наши услуги</div>
-            <div className={styles.link} href="#">
-              Программы
-            </div>
-            <div className={styles.link} href="#">
-              Гарантии
-            </div>
-            <div className={styles.link} href="#">
-              Преимущества
-            </div>
-            <div className={styles.link} href="#">
-              Условия
-            </div>
-          </div>
-          <div className={styles.column}>
-            <div className={styles.title}>Reach us</div>
-            <div className={styles.link} href="#">
-              <Image src={message} />
-              <span style={{ marginLeft: "10px" }}>ihsangroup@gmail.io</span>
-            </div>
-            <div className={styles.link} href="#">
-              <Image src={phone} />
-              <span style={{ marginLeft: "10px" }}>+996-(555)-555-555</span>
-            </div>
-            <div className={styles.link} href="#">
-              <Image src={location} />
-              <span style={{ marginLeft: "10px" }}>
-                г. Бишкек, Раззакова / Боконбаева 113, <br /> БЦ “Альтаир”,
-                3-этаж.
-              </span>
+            <div className={styles.column}>
+              <div className={styles.title}>Reach us</div>
+              <div className={styles.link} href="#">
+                <Image src={message} />
+                <span style={{ marginLeft: "10px" }}>ihsangroup@gmail.io</span>
+              </div>
+              <div className={styles.link} href="#">
+                <Image src={phone} />
+                <span style={{ marginLeft: "10px" }}>+996-(555)-555-555</span>
+              </div>
+              <div className={styles.link} href="#">
+                <Image src={location} />
+                <span style={{ marginLeft: "10px" }}>
+                  г. Бишкек, Раззакова / Боконбаева 113, <br /> БЦ “Альтаир”,
+                  3-этаж.
+                </span>
+              </div>
             </div>
           </div>
 
